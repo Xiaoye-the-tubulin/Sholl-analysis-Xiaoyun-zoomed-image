@@ -771,13 +771,13 @@ def plot_aggregated_results(all_profiles, common_radii, average_profile, std_pro
 
 
 # Main execution
-image_path = "Composite (RGB)-b.tif"  # Replace with your image path
+image_path = "GFP-OE.tif"  # Replace with your image path
 results = process_image_multi_soma(image_path)
 
 if results:
     img, skeleton, skeleton_with_circles, img_with_circles, all_profiles, all_lengths, soma_centers, radii = results
     # save to excel
-    xlsx_path = os.path.join("excel", "Sholl_analysis-GFP.xlsx")  # save just to one excel
+    xlsx_path = os.path.join("excel", "data from-representative image.xlsx")  # save just to one excel
     save_sholl_to_excel(xlsx_path, image_path, soma_centers, radii, all_profiles, all_lengths)  # **ADDED**
     print(f"Saved Excel: {xlsx_path}")
 
